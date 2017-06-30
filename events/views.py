@@ -6,29 +6,41 @@ from .models import Event, Guide, Review
 
 # Create your views here.
 
-def afisha(request):
-    return render(request, 'events/afisha.html', {})
+# Главная страница. Просто отдаем статику
+def affiche(request):
+    return render(request, 'events/affiche.html')
 
-def team(request):
-    team = Guide.objects.all()
-    return render(request, 'events/team.html', {"team": team})
+
+# Команда
+def guides(request):
+    guides = Guide.objects.all()
+    head = {
+    "title": "Наши гиды"
+    }
+    context = {"guides": guides, 'head': head}
+    return render(request, 'events/guides.html', context)
 
 def show_guide(request, nick):
     guide = Guide.objects.get(nick=nick)
-    return render(request, 'events/show_guide.html', {"guide": guide})
+    head = {'title': guide.name}
+    context = {"guide": guide, 'head': head}
+    return render(request, 'events/show_guide.html', context)
 
+
+# Отзывы
 def reviews(request):
     reviews = Review.objects.all()
-    return render(request, 'events/reviews.html', {"reviews": reviews})
+    context = {"reviews": reviews}
+    return render(request, 'events/reviews.html', context)
 
-def index(request):
+
+# Проекты
+def projects(request):
     events = Event.objects.all()
-    template = loader.get_template('events/index.html')
-    context = {
-            'events': events,
-            }
-    return HttpResponse(template.render(context, request))
+    context = {'events': events}
+    return render(request, 'events/projects.html', context)
 
-def show_event(request, permalink):
+def show_project(request, permalink):
     event = Event.objects.get(permalink=permalink)
-    return render(request, 'events/show_event.html', {"event":event})
+    context = {"event":event}
+    return render(request, 'events/show_project.html', context)

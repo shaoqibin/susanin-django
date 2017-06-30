@@ -1,12 +1,66 @@
 <!DOCTYPE html>
-<html lang="ru-RU" itemscope itemtype="http://schema.org/Blog" prefix="og: http://ogp.me/ns#">
+<html>
 
 <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="generator" content="Django" />
 
-	{% include "head.html" %}
+	<title>
+	  {% block title %}
+	    {% if head.title %}
+	      {{head.title}} &mdash; Сусаниных нет
+	    {% else %}
+	      Сусаниных нет &mdash; есть отличные гиды и уютные прогулки
+	    {% endif %}
+	  {% endblock %}
+	</title>
+
+	<!-- All in One SEO Pack 2.3.13.2 by Michael Torbert of Semper Fi Web Design[296,378] -->
+	<meta name="description" content="Пожалуй, лучшие экскурсии в городе." />
+
+	<meta name="keywords" content="прогулки,экскурсии,гиды,москва,архитектура" />
+
+	<link rel="canonical" href="http://susaninykh.net/" />
+	<meta property="og:title" content="Сусаниных нет" />
+	<meta property="og:type" content="blog" />
+	<meta property="og:url" content="http://susaninykh.net/" />
+	<!--
+	<meta property="og:image" content="http://susaninykh.net/wordpress/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" />
+	-->
+	<meta property="og:site_name" content="Сусаниных нет" />
+	<meta property="og:description" content="Есть отличные гиды и уютные прогулки в любимом городе" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Сусаниных нет" />
+	<meta name="twitter:description" content="Есть отличные гиды и уютные прогулки в любимом городе" />
+	<!--
+	<meta name="twitter:image" content="http://susaninykh.net/wordpress/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" />
+	<meta itemprop="image" content="http://susaninykh.net/wordpress/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" />
+	-->
+	<!-- /all in one seo pack -->
+
+	<!-- BOOTSTRAP -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+	<!-- JQUERY -->
+	<script type='text/javascript' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+	<script type='text/javascript' src='https://code.jquery.com/jquery-migrate-3.0.0.min.js'></script>
+
+	<!-- KALE -->
+	<link rel='stylesheet' id='kale-style-css' href='/static/style.css' type='text/css' media='all' />
+	<script type='text/javascript' src='/static/js/kale.js'></script>
+
+	<!--
+
+	<link rel="icon" href="http://susaninykh.net/wordpress/wp-content/uploads/2017/05/cropped-fav-32x32.png" sizes="32x32" />
+	<link rel="icon" href="http://susaninykh.net/wordpress/wp-content/uploads/2017/05/cropped-fav-192x192.png" sizes="192x192" />
+	<link rel="apple-touch-icon-precomposed" href="http://susaninykh.net/wordpress/wp-content/uploads/2017/05/cropped-fav-180x180.png" />
+
+	-->
 
 </head>
-
 
 
 <body class="home page-template-default page page-id-19 wp-custom-logo">
@@ -21,26 +75,20 @@
 			<!-- Frontpage Banner / Slider -->
 			<!-- /Frontpage Banner / Slider -->
 
-			{% block content %}
-			{% endblock %}
+			<!-- Content -->
+			{% block content %} Hello world! {% endblock %}
+			<!-- /Content -->
 
 			<hr />
 
-
-
-
-
-			<!-- /Footer Widgets -->
-
 			<!-- Footer -->
-				{% include "footer.html" %}
-				<!-- /Footer -->
+			{% include "footer.html" %}
+			<!-- /Footer -->
 
-			</div>
-			<!-- /Container -->
 		</div>
-		<!-- /Main Wrapper -->
+		<!-- /Container -->
+	</div>
+	<!-- /Main Wrapper -->
 
 </body>
-
 </html>

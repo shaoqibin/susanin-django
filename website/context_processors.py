@@ -13,11 +13,11 @@ def main_menu(request):
     "title":"Афиша",
     },
     {
-    "url": reverse('projects_index'),
+    "url": reverse('projects'),
     "title": "Наши проекты",
     },
     {
-    "url":reverse('team'),
+    "url":reverse('guides'),
     "title":"Команда",
     },
     {

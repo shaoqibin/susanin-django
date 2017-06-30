@@ -11,10 +11,13 @@
 
 <p>{{guide.about}}</p>
 
+<div style="clear:both;"></div>
 <h3>Экскурсии</h3>
 
 {% for event in guide.event_set.all %}
-<a href="{% url 'show_event' event.permalink %}">{{event.name}}</a>
+<img src="{{event.image.url}}" width="150" class="alignleft"/>
+<a href="{% url 'show_project' event.permalink %}">{{event.name}}</a>
+<div style="clear:both;"></div>
 {% endfor %}
 
 </div>

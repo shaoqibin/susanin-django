@@ -1,0 +1,22 @@
+{% extends "two_columns.html" %}
+
+{% block main %}
+
+{% for guide in guides %}
+{% if guide.about and guide.image %}
+<a href="{% url 'show_guide' guide.nick %}">
+<h2>{{guide.name}}</h2>
+</a>
+{% if guide.image %}
+<img src="{{guide.image.url}}" width="150" class="alignleft"/>
+{% endif %}
+<p>{{guide.about|safe}}</p>
+<p><strong>Экскурсии:</strong>
+  {% for project in guide.event_set.all %}
+  <a href="{% url 'show_project' project.permalink %}">{{project.name}}</a>
+  {% endfor %}
+<div style="clear:both;"></div>
+{% endif %}
+{% endfor %}
+
+{% endblock %}

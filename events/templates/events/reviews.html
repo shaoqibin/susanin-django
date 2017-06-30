@@ -1,11 +1,12 @@
 {% extends "two_columns.html" %}
 
-{% block main %}
+{% block title %}
+Отзывы &mdash; Сусаниных нет
+{% endblock %}
 
+{% block main %}
 {% for review in reviews %}
 <h2>{{review.name}}</h2>
 <p>{{review.review}}</p>
-
 {% endfor %}
-
 {% endblock %}
