@@ -37,7 +37,10 @@ def reviews(request):
 # Проекты
 def projects(request):
     events = Event.objects.all()
-    context = {'events': events}
+    head = {
+    "title": "Наши проекты"
+    }
+    context = {'events': events, "head": head}
     return render(request, 'events/projects.html', context)
 
 def show_project(request, permalink):
