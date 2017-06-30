@@ -10,7 +10,7 @@ License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 Text Domain: kale
 Domain Path: /languages/
-Tags: own 
+Tags: own
 */
 
 
@@ -52,10 +52,13 @@ h6{font-size:12px;}
 .block-title span:before,
 .block-title span:after{content:"";position:absolute;left:0;top:50%;margin-top:-2px;width:20px;height:4px;border-top:1px solid #c4c4c4;border-bottom:1px solid #c4c4c4}
 .block-title span:after{left:auto;right:0}
-        
+
 /* --- Fonts --- */
 .logo .header-logo-text{line-height:60px;font-size:60px;font-weight:200;font-family: 'Raleway', sans-serif;text-transform:uppercase;}
-.tagline{font-family: 'Caveat', cursive; font-size:18px;}
+.tagline{
+  /* font-family: 'Caveat', cursive; */
+  font-size:16px;
+}
 
 .form-label{text-transform:uppercase;font-weight:400;font-family: 'Montserrat', sans-serif;}
 .navbar-nav > li > a{font-family: 'Montserrat', sans-serif;text-transform:uppercase;font-weight:400;}
@@ -64,7 +67,7 @@ h6{font-size:12px;}
 .pagination-blog-feed a{font-family: 'Montserrat', sans-serif;font-weight:400;text-transform:uppercase;}
 .pagination-post a{font-family: 'Montserrat', sans-serif;font-weight:400;text-transform:uppercase;}
 .rpwwt-widget .recent-posts-widget-with-thumbnails .rpwwt-post-title {font-family: 'Montserrat', sans-serif;font-weight:400;text-transform:uppercase;}
-.header-row-1 .widget_nav_menu .menu > li > a{font-family: 'Montserrat', sans-serif;font-weight:400;text-transform:uppercase;}    
+.header-row-1 .widget_nav_menu .menu > li > a{font-family: 'Montserrat', sans-serif;font-weight:400;text-transform:uppercase;}
 
 /* COLORS
 ------------------------------------------------------------------------*/
@@ -197,7 +200,7 @@ img.aligncenter { max-width:100%; height:auto;}
 .logo .header-logo-text a:focus{text-decoration:none;}
 .logo img.custom-logo{max-width:100%; height:auto;}
 
-/* --- Tagline --- */    
+/* --- Tagline --- */
 .tagline{text-align:center;margin-top:15px;}
 .tagline p{display:inline-block;margin:0;position:relative;padding:0 26px; text-transform:lowercase;}
 .tagline p:before,.tagline p:after{content:"";position:absolute;left:0;top:50%;margin-top:-2px;width:20px;height:4px;border-top:1px solid #c4c4c4;border-bottom:1px solid #c4c4c4}
@@ -285,7 +288,7 @@ img.aligncenter { max-width:100%; height:auto;}
 
 .frontpage-featured-posts{}
 .frontpage-featured-posts .entry{margin-bottom:20px;}
-	
+
 /* POST
 ------------------------------------------------------------------------*/
 
@@ -356,7 +359,7 @@ h1.entry-title{margin-bottom:25px}
 .comments .comment-reply-title{line-height:1.3;color:#000;margin:0 0 40px;letter-spacing:1px;margin-bottom:5px}
 
 .comments .comment-notes{font-size:12px;font-style:italic;margin-bottom:40px;}
-	
+
 /* BLOG FEED
 ------------------------------------------------------------------------*/
 
@@ -529,7 +532,7 @@ padding: 10px 28px; font-size: 11px; font-weight: 300; text-transform: uppercase
 
 /* FRONT PAGE - LARGE POST
 ------------------------------------------------------------------------*/
-    
+
 .frontpage-large-post{}
 .frontpage-large-post .entry-summary{font-size:14px;font-weight:400;text-align: justify;-moz-column-count: 2;-moz-column-gap: 25px;-webkit-column-count: 2;-webkit-column-gap: 25px;column-count: 2;column-gap: 25px;}
 .frontpage-large-post .entry-title{font-size:24px}
@@ -559,7 +562,7 @@ padding: 10px 28px; font-size: 11px; font-weight: 300; text-transform: uppercase
 .iframe-video iframe {position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; }
 
 
-/* WOOCOMMERCE 
+/* WOOCOMMERCE
 ------------------------------------------------------------------------*/
 
 /*** Misc ***/
@@ -595,7 +598,7 @@ padding: 10px 28px; font-size: 11px; font-weight: 300; text-transform: uppercase
 
 /* MEDIA QUERIES
 ------------------------------------------------------------------------*/
-	
+
 @media (min-width: 768px) {
 	body.custom-background .main-wrapper{width:820px}
 }
@@ -663,16 +666,16 @@ padding: 10px 28px; font-size: 11px; font-weight: 300; text-transform: uppercase
 	.header-row-1{max-height:0;margin:0;overflow:hidden;-webkit-transition:all 0.3s ease;-moz-transition:all 0.3s ease;-ms-transition:all 0.3s ease;-o-transition:all 0.3s ease;transition:all 0.3s ease;}
 	.header-row-1.open{max-height:300px}
     .header-row-1 .widget {margin-bottom:0px}
-    
+
 	.header-row-1-left .menu-social-container {text-align:center;padding:15px 0;border-bottom:1px solid #545454;margin-bottom:10px}
-	
+
     .header-row-1-right .widget_nav_menu .menu{float:none;padding-bottom:15px}
 	.header-row-1-right .widget_nav_menu .menu > li{display:block;padding:5px 0;text-align:center}
-    
+
 	.header-row-2{margin-bottom:20px}
 	.header-row-3{margin-bottom:25px}
 	.header-row-1-toggle{display:block}
-	
+
 	.navbar-default .navbar-collapse{border-color:#000;text-align:left}
 	.navbar-default .navbar-nav{display:block}
 	.navbar-nav > li{display:block}
@@ -681,11 +684,11 @@ padding: 10px 28px; font-size: 11px; font-weight: 300; text-transform: uppercase
 	.navbar-nav > li.search > a{color:#545454;position:absolute;right:0;top:7.5px}
 	.main_search{display: block;float: none;left: 0;position: static;width: auto;}
 	.main_search .form-control{height:40px;padding-left:15px;padding-right:15px}
-	
+
 	.frontpage-slider .caption .date{font-size:12px}
 	.frontpage-banner .caption h2,
     .frontpage-slider .caption h2{font-size:22px;padding-bottom:10px;margin-bottom:15px}
-    
+
 }
 @media (max-width:480px){
 	.frontpage-banner .caption,
@@ -696,7 +699,7 @@ padding: 10px 28px; font-size: 11px; font-weight: 300; text-transform: uppercase
 	.pagination-post a,
 	.pagination-blog-feed a{font-size:10px}
 	.block-title{font-size:14px}
-	
+
     .widget-title,
 	h4.form-label,
 	.entry-title{font-size:12px}
