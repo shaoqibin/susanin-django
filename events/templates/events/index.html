@@ -18,9 +18,8 @@
 <div class="entry col-md-4">
 	<div class="entry-content">
 
-
-	<p><img src="{{event.image.url}}" width=600 /></p>
 	<a href="{% url 'show_event' event.permalink %}">
+		<img src="{{event.image.url}}" width=600 />
 		<h2>{{event.name}}</h2>
 	</a>
 	{% include "events/tp.html" %}

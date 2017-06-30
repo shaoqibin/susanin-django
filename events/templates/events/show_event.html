@@ -14,9 +14,16 @@
 
 <p>{{event.long_desc}}</p>
 
-<p>Ваш гид:
+<h3>Ваш гид</h3>
 {% for guide in event.guide.all %}
-<a href="{% url 'show_guide' guide.nick %}">{{guide.name}}</a>
+<a href="{% url 'show_guide' guide.nick %}">
+  {% if guide.image %}
+<img src="{{ guide.image.url }}" />
+{% endif %}
+<br />
+{{guide.name}}</a>
+</p>
+
 {% endfor %}
 
 </div>

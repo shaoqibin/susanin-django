@@ -5,7 +5,9 @@
 <div class="entry">
 <h2>{{guide.name}}</h2>
 
+{% if guide.image %}
 <img src="{{guide.image.url}}" class="img-responsive alignleft" />
+{% endif %}
 
 <p>{{guide.about}}</p>
 
