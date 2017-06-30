@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Two Columns -->
+<div class="row two-columns">
+    <!-- Main Column -->
+        <div class="main-column  col-md-8 ">
+
+        <!-- Page Content -->
+        <div id="page-19" class="entry entry-page post-19 page type-page status-publish hentry">
+
+                        {%block main%}
+                                    <h1 class="entry-title">Афиша экскурсий</h1>
+
+            <div class="entry-content"><p><script type="text/javascript" async="async" defer="defer" charset="UTF-8" src="https://timepad.ru/js/tpwf/loader/min/loader.js" data-timepad-customized="27812" data-timepad-apidomain="timepad.ru" data-timepad-widget-v2="event_list3"></script></p>
+</div>
+        {% endblock %}
+
+        </div>
+        <!-- /Page Content -->
+
+        <!-- Page Comments -->
+
+        <!-- /Page Comments -->
+
+    </div>
+    <!-- /Main Column -->
+
+    <!-- Sidebar -->
+    {% block sidebar %}
+      {% include "sidebar.html" %}
+    {% endblock %}
+<!-- /Sidebar -->
+</div>
+<!-- /Two Columns -->
+{% endblock %}

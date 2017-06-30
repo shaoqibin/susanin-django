@@ -1,0 +1,18 @@
+{% extends "two_columns.html" %}
+
+{% block main %}
+
+{% for member in team %}
+{% if member.about and member.image %}
+<a href="{% url 'show_guide' member.nick %}">
+<h2>{{member.name}}</h2>
+</a>
+{% if member.image %}
+<img src="{{member.image.url}}" width="150" class="alignleft"/>
+{% endif %}
+<p>{{member.about|safe}}</p>
+<div style="clear:both;"></div>
+{% endif %}
+{% endfor %}
+
+{% endblock %}

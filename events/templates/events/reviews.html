@@ -1,0 +1,11 @@
+{% extends "two_columns.html" %}
+
+{% block main %}
+
+{% for review in reviews %}
+<h2>{{review.name}}</h2>
+<p>{{review.review}}</p>
+
+{% endfor %}
+
+{% endblock %}

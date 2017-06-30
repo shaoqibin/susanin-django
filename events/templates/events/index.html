@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+
+
+{% block content %}
+
+<h1 class="block-title"><span>Наши проекты</span></h1>
+
+{% if events %}
+
+{% for event in events %}
+
+{% if forloop.counter0|divisibleby:"3" %}
+<div class="row"></div>
+{% endif %}
+
+<div class="entry col-md-4">
+	<div class="entry-content">
+
+
+	<p><img src="{{event.image.url}}" width=600 /></p>
+	<a href="{% url 'show_event' event.permalink %}">
+		<h2>{{event.name}}</h2>
+	</a>
+	{% include "events/tp.html" %}
+	<p>{{event.short_desc|safe}}</p>
+	<!--
+	<p>{{event.long_desc}}</p>
+-->
+</div>
+</div>
+
+{% endfor %}
+
+<div style="clear:both;"></div>
+{% endif %} {% endblock %}

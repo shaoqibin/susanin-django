@@ -1,0 +1,20 @@
+{% extends "two_columns.html" %}
+
+{% block main %}
+
+<div class="entry">
+<h2>{{guide.name}}</h2>
+
+<img src="{{guide.image.url}}" class="img-responsive alignleft" />
+
+<p>{{guide.about}}</p>
+
+<h3>Экскурсии</h3>
+
+{% for event in guide.event_set.all %}
+<a href="{% url 'show_event' event.permalink %}">{{event.name}}</a>
+{% endfor %}
+
+</div>
+
+{% endblock %}
