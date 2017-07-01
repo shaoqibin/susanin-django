@@ -26,13 +26,23 @@
 
 {% endfor %}
 
-<hr />
 {% for attachment in event.attachment_set.all %}
 
 {{ attachment.text|safe }}
 <br />
 {{ attachment.embed|safe }}
 
+{% endfor %}
+
+<hr />
+
+<h3>Отзывы</h3>
+
+{% for review in event.review_set.all %}
+<p>{{review.review}}</p>
+<em>{{review.name}}</em>
+<br />
+<br />
 {% endfor %}
 
 </div>
