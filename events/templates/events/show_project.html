@@ -15,7 +15,7 @@
 <p>{{event.long_desc|safe}}</p>
 
 <h3>Ваш гид</h3>
-{% for guide in event.guide.all %}
+{% for guide in event.guides.all %}
 <a href="{% url 'show_guide' guide.nick %}">
   {% if guide.image %}
 <img src="{{ guide.image.url }}"  width="150" />
@@ -23,6 +23,13 @@
 <br />
 {{guide.name}}</a>
 </p>
+
+{% endfor %}
+
+<hr />
+{% for attachment in event.attachment_set.all %}
+
+{{ attachment.text|safe }}
 
 {% endfor %}
 
