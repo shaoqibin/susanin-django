@@ -22,6 +22,6 @@ urlpatterns = [
         url(r'team/(?P<nick>\w+)/$', events.show_guide, name='show_guide'),
         # Фидбэк
         url(r'feedback/$', events.reviews, name='index'),
-
+        # Ну и контакты
         url(r'contacts/$', pages.page, {"page": "contacts"}),
         ]

@@ -20,13 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 
-
-ALLOWED_HOSTS = [
-        'localhost',
-	'susaninykh.net',
-	'wsgi.kuzmichev.org.ru',
-]
-
 MARKDOWNIFY_WHITELIST_TAGS = [
     'a',
     'abbr',

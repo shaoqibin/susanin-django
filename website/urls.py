@@ -20,9 +20,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    # Передаем управление основному приложению
     url(r'^', include('events.urls')),
+    # Так, игрушки
     url(r'^polls/', include('polls.urls')),
+    # Наш админ
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('pages.urls')),
+    # Для редактора
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
