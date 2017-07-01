@@ -5,8 +5,16 @@
 {% endblock %}
 
 {% block main %}
+
+Пришлите свой отзыв на <a href="mailto:info@susaninykh.net">info@susaninykh.net</a>
+
+<hr />
+
 {% for review in reviews %}
 <h2>{{review.name}}</h2>
 <p>{{review.review}}</p>
 {% endfor %}
+
+<a href="https://www.facebook.com/pg/susaninykhnet/reviews/">Отзывы на ФБ</a>
+
 {% endblock %}
