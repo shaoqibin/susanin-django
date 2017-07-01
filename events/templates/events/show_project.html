@@ -30,6 +30,8 @@
 {% for attachment in event.attachment_set.all %}
 
 {{ attachment.text|safe }}
+<br />
+{{ attachment.embed|safe }}
 
 {% endfor %}
 

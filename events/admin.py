@@ -1,7 +1,8 @@
 from django.contrib import admin
 from .models import Event, Guide, Review, Attachment
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
-from django.forms import ModelForm
+from ckeditor.widgets import CKEditorWidget
+from django.forms import ModelForm, Textarea
 # Register your models here.
 
 
