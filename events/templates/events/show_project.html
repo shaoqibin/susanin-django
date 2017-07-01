@@ -10,9 +10,9 @@
 
 <h3>Билеты:</h3>
 {% include "events/tp.html" %}
-<p>{{event.short_desc}}</p>
+<p>{{event.short_desc|safe}}</p>
 
-<p>{{event.long_desc}}</p>
+<p>{{event.long_desc|safe}}</p>
 
 <h3>Ваш гид</h3>
 {% for guide in event.guide.all %}

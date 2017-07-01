@@ -44,7 +44,11 @@ MARKDOWNIFY_WHITELIST_TAGS = [
 
 # Application definition
 
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
 INSTALLED_APPS = [
+    'ckeditor',
+    'ckeditor_uploader',
     'pages',
     'polls',
     'events',
