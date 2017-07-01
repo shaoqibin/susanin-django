@@ -14,7 +14,7 @@ def main_menu(request):
     },
     {
     "url": reverse('projects'),
-    "title": "Наши проекты",
+    "title": "Проекты",
     },
     {
     "url":reverse('guides'),
