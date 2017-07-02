@@ -3,9 +3,14 @@ from django.conf.urls import url
 from . import views as events
 from pages import views as pages
 from events.models import Event
+from pprint import pprint
 
-events_list=Event.objects.values_list('permalink',flat=True)
-events_list='|'.join(events_list)
+try:
+    events_list=Event.objects.values_list('permalink',flat=True)
+    events_list=list(events_list)
+    events_list='|'.join(events_list)
+except:
+    events_list='test'
 
 # Это основное приложение проекта
 
@@ -15,7 +20,7 @@ urlpatterns = [
         # Проекты
         url(r'projects/$', events.projects, name='projects'),
         # Перехватываем только соответствующие тэгам проектов
-        url(r'(?P<permalink>' + events_list + ')/', events.show_project, name='show_project'),
+        url(r'^(?P<permalink>' + events_list + ')/', events.show_project, name='show_project'),
         # Команда
         url(r'team/$', events.guides, name='guides'),
         # Отдельный человек
