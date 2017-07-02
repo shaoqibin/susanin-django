@@ -19,7 +19,7 @@ class Event(models.Model):
     permalink = models.CharField(max_length=200, null=True)
     short_desc = models.TextField(null=True, blank=True)
     long_desc = models.TextField(null=True, blank=True)
-    image = models.ImageField(upload_to='events', null=True, blank=True)
+    image = models.ImageField(upload_to='events', null=True, blank=False)
     tp_master_id = models.IntegerField(null=True, blank=True)
     guides = models.ManyToManyField(Guide, blank=True)
 

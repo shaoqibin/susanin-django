@@ -10,7 +10,9 @@
 {% endif %}
 
 <p>{{guide.about}}</p>
-
+{% if guide.facebook %}
+<p>У гида есть страничка <a href="https://www.facebook.com/{{guide.facebook}}">в фейсбуке</a>.</p>
+{% endif %}
 <div style="clear:both;"></div>
 <h3>Экскурсии</h3>
 
