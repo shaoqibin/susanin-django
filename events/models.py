@@ -9,7 +9,8 @@ class Guide(models.Model):
     nick = models.CharField(max_length=200, null=True)
     about = models.TextField(null=True, blank=True)
     image = models.ImageField(upload_to='people', null=True, blank=True)
-
+    facebook = models.CharField(max_length=200,blank=True,null=True)
+    telegram_id = models.IntegerField(blank=True,null=True)
     def __str__(self):
         return self.name
 
@@ -37,4 +38,3 @@ class Review(models.Model):
     event = models.ManyToManyField(Event, blank=True)
     def __str__(self):
         return self.name
-
