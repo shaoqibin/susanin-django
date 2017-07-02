@@ -3,3 +3,4 @@
 website/prod.py
 *pycache*
 media/
+node_modules
